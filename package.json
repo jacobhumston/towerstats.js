@@ -14,8 +14,8 @@
     "scripts": {
         "build": "bun x tsc",
         "format": "bun x prettier --write .",
-        "docs": "bun x typedoc src --plugin typedoc-github-theme",
-        "compile": "del dist && del docs && bun x tsc && bun x typedoc && bun x prettier --write ."
+        "docs": "bun x typedoc --plugin typedoc-github-theme",
+        "compile": "del dist --verbose && del docs --verbose && bun x tsc && bun x typedoc --plugin typedoc-github-theme && bun x prettier --write ."
     },
     "main": "dist/index.js",
     "module": "dist/index.js",
