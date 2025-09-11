@@ -1,0 +1,41 @@
+{
+    "name": "towerstats.js",
+    "type": "module",
+    "version": "0.0.1-alpha",
+    "description": "A JavaScript library for fetching and displaying Tower stats.",
+    "devDependencies": {
+        "@types/bun": "latest",
+        "del-cli": "^6.0.0",
+        "prettier": "^3.6.2",
+        "typedoc": "^0.28.12",
+        "typedoc-github-theme": "^0.3.1",
+        "typescript": "^5.9.2"
+    },
+    "scripts": {
+        "build": "bun x tsc",
+        "format": "bun x prettier --write .",
+        "docs": "bun x typedoc src --plugin typedoc-github-theme",
+        "compile": "del dist && del docs && bun x tsc && bun x typedoc && bun x prettier --write ."
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jacobhumston/towerstats.js.git"
+    },
+    "maintainers": [
+        {
+            "name": "Jacob Humston",
+            "email": "hello@lovelyjacob.com"
+        }
+    ],
+    "files": [
+        "dist/"
+    ],
+    "author": "jacobhumston",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jacobhumston/towerstats.js/issues"
+    }
+}
