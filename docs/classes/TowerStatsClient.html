@@ -68,8 +68,8 @@
                         <li>
                             Defined in
                             <a
-                                href="https://github.com/jacobhumston/towerstats.js/blob/30adc01d109735eccd8344b789b13234083da326/src/client.ts#L2"
-                                >client.ts:2</a
+                                href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L4"
+                                >client.ts:4</a
                             >
                         </li>
                     </ul>
@@ -101,6 +101,11 @@
                                             ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                                 <use href="../assets/icons.svg#icon-2048"></use></svg
                                             ><span>get<wbr />API<wbr />Key</span></a
+                                        >
+                                        <a href="#getroutes" class="tsd-index-link"
+                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                                <use href="../assets/icons.svg#icon-2048"></use></svg
+                                            ><span>get<wbr />Routes</span></a
                                         >
                                         <a href="#swapapikey" class="tsd-index-link"
                                             ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
@@ -134,11 +139,20 @@
                                     <div class="tsd-signature tsd-anchor-link" id="constructortowerstatsclient">
                                         <span class="tsd-signature-keyword">new</span>
                                         <span class="tsd-kind-constructor-signature">TowerStatsClient</span
-                                        ><span class="tsd-signature-symbol">(</span
-                                        ><span class="tsd-kind-parameter">apiKey</span
+                                        ><span class="tsd-signature-symbol">(</span><br />    <span
+                                            class="tsd-kind-parameter"
+                                            >apiKey</span
                                         ><span class="tsd-signature-symbol">:</span>
                                         <span class="tsd-signature-type">string</span
-                                        ><span class="tsd-signature-symbol">)</span
+                                        ><span class="tsd-signature-symbol">,</span><br />    <span
+                                            class="tsd-kind-parameter"
+                                            >apiRoutes</span
+                                        ><span class="tsd-signature-symbol">?:</span>
+                                        <a href="RoutesConstructor.html" class="tsd-signature-type tsd-kind-class"
+                                            >RoutesConstructor</a
+                                        ><span class="tsd-signature-symbol">,</span><br /><span
+                                            class="tsd-signature-symbol"
+                                            >)</span
                                         ><span class="tsd-signature-symbol">:</span>
                                         <a href="" class="tsd-signature-type tsd-kind-class">TowerStatsClient</a
                                         ><a
@@ -165,6 +179,22 @@
                                                         <p>Your TowerStats API key.</p>
                                                     </div>
                                                 </li>
+                                                <li>
+                                                    <span
+                                                        ><span class="tsd-kind-parameter">apiRoutes</span>:
+                                                        <a
+                                                            href="RoutesConstructor.html"
+                                                            class="tsd-signature-type tsd-kind-class"
+                                                            >RoutesConstructor</a
+                                                        ><span class="tsd-signature-symbol"> = routes</span></span
+                                                    >
+                                                    <div class="tsd-comment tsd-typography">
+                                                        <p>
+                                                            The API routes to use. Defaults to the official TowerStats
+                                                            API routes.
+                                                        </p>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                         <h4 class="tsd-returns-title">
@@ -176,8 +206,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/30adc01d109735eccd8344b789b13234083da326/src/client.ts#L10"
-                                                        >client.ts:10</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L14"
+                                                        >client.ts:14</a
                                                     >
                                                 </li>
                                             </ul>
@@ -229,8 +259,55 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/30adc01d109735eccd8344b789b13234083da326/src/client.ts#L18"
-                                                        >client.ts:18</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L23"
+                                                        >client.ts:23</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="tsd-panel tsd-member">
+                            <h3 class="tsd-anchor-link" id="getroutes">
+                                <span>get<wbr />Routes</span
+                                ><a href="#getroutes" aria-label="Permalink" class="tsd-anchor-icon"
+                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                ></a>
+                            </h3>
+                            <ul class="tsd-signatures">
+                                <li class="">
+                                    <div class="tsd-signature tsd-anchor-link" id="getroutes-1">
+                                        <span class="tsd-kind-call-signature">getRoutes</span
+                                        ><span class="tsd-signature-symbol">()</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <a href="RoutesConstructor.html" class="tsd-signature-type tsd-kind-class"
+                                            >RoutesConstructor</a
+                                        ><a href="#getroutes-1" aria-label="Permalink" class="tsd-anchor-icon"
+                                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                        ></a>
+                                    </div>
+                                    <div class="tsd-description">
+                                        <div class="tsd-comment tsd-typography">
+                                            <p>Get the routes of this client.</p>
+                                        </div>
+                                        <h4 class="tsd-returns-title">
+                                            Returns
+                                            <a href="RoutesConstructor.html" class="tsd-signature-type tsd-kind-class"
+                                                >RoutesConstructor</a
+                                            >
+                                        </h4>
+                                        <p>The routes.</p>
+                                        <aside class="tsd-sources">
+                                            <ul>
+                                                <li>
+                                                    Defined in
+                                                    <a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L38"
+                                                        >client.ts:38</a
                                                     >
                                                 </li>
                                             </ul>
@@ -286,8 +363,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/30adc01d109735eccd8344b789b13234083da326/src/client.ts#L25"
-                                                        >client.ts:25</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L30"
+                                                        >client.ts:30</a
                                                     >
                                                 </li>
                                             </ul>
@@ -442,6 +519,10 @@
                                         ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                             <use href="../assets/icons.svg#icon-2048"></use></svg
                                         ><span>get<wbr />API<wbr />Key</span></a
+                                    ><a href="#getroutes"
+                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                            <use href="../assets/icons.svg#icon-2048"></use></svg
+                                        ><span>get<wbr />Routes</span></a
                                     ><a href="#swapapikey"
                                         ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                             <use href="../assets/icons.svg#icon-2048"></use></svg

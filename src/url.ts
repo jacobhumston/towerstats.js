@@ -24,7 +24,7 @@ export class RoutesConstructor {
      * `POST` Submit badge data for a Roblox user.
      * @returns `/api/badges` route.
      */
-    badges(): URL {
+    get badges(): URL {
         return this.baseAppend('/api/badges');
     }
 
@@ -32,7 +32,7 @@ export class RoutesConstructor {
      * `POST` Fetch all followers for a Roblox user.
      * @returns `/api/followers` route.
      */
-    followers(): URL {
+    get followers(): URL {
         return this.baseAppend('/api/followers');
     }
 
@@ -40,7 +40,7 @@ export class RoutesConstructor {
      * `POST` Fetch all users that a Roblox user is following.
      * @returns `/api/following` route.
      */
-    following(): URL {
+    get following(): URL {
         return this.baseAppend('/api/following');
     }
 }

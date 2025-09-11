@@ -4,21 +4,21 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+    release:
+        types: [created]
 
 jobs:
-  publish-npm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-      - run: bun install
-      - run: bun compile
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    publish-npm:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+            - uses: oven-sh/setup-bun@v2
+              with:
+                  node-version: 20
+                  registry-url: https://registry.npmjs.org/
+            - run: bun install
+            - run: bun compile
+            - run: npm publish
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
