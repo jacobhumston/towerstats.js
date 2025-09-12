@@ -68,8 +68,8 @@
                         <li>
                             Defined in
                             <a
-                                href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L4"
-                                >client.ts:4</a
+                                href="https://github.com/jacobhumston/towerstats.js/blob/7e6bbbd0224f55c3129fcb6468fefbd60c9eddc1/src/client.ts#L13"
+                                >client.ts:13</a
                             >
                         </li>
                     </ul>
@@ -97,6 +97,11 @@
                                 <section class="tsd-index-section">
                                     <h3 class="tsd-index-heading">Methods</h3>
                                     <div class="tsd-index-list">
+                                        <a href="#checkbadges" class="tsd-index-link"
+                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                                <use href="../assets/icons.svg#icon-2048"></use></svg
+                                            ><span>check<wbr />Badges</span></a
+                                        >
                                         <a href="#getapikey" class="tsd-index-link"
                                             ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                                 <use href="../assets/icons.svg#icon-2048"></use></svg
@@ -206,8 +211,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L14"
-                                                        >client.ts:14</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7e6bbbd0224f55c3129fcb6468fefbd60c9eddc1/src/client.ts#L25"
+                                                        >client.ts:25</a
                                                     >
                                                 </li>
                                             </ul>
@@ -226,6 +231,96 @@
                         <h2>Methods</h2>
                     </summary>
                     <section>
+                        <section class="tsd-panel tsd-member">
+                            <h3 class="tsd-anchor-link" id="checkbadges">
+                                <span>check<wbr />Badges</span
+                                ><a href="#checkbadges" aria-label="Permalink" class="tsd-anchor-icon"
+                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                ></a>
+                            </h3>
+                            <ul class="tsd-signatures">
+                                <li class="">
+                                    <div class="tsd-signature tsd-anchor-link" id="checkbadges-1">
+                                        <span class="tsd-kind-call-signature">checkBadges</span
+                                        ><span class="tsd-signature-symbol">(</span
+                                        ><span class="tsd-kind-parameter">userId</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">number</span
+                                        ><span class="tsd-signature-symbol">,</span>
+                                        <span class="tsd-kind-parameter">badgeIds</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">number</span
+                                        ><span class="tsd-signature-symbol">[]</span
+                                        ><span class="tsd-signature-symbol">)</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">Promise</span
+                                        ><span class="tsd-signature-symbol">&lt;</span
+                                        ><a
+                                            href="../types/CheckedBadges.html"
+                                            class="tsd-signature-type tsd-kind-type-alias"
+                                            >CheckedBadges</a
+                                        ><span class="tsd-signature-symbol">&gt;</span
+                                        ><a href="#checkbadges-1" aria-label="Permalink" class="tsd-anchor-icon"
+                                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                        ></a>
+                                    </div>
+                                    <div class="tsd-description">
+                                        <div class="tsd-comment tsd-typography"><p>Check a user's badges.</p></div>
+                                        <div class="tsd-parameters">
+                                            <h4 class="tsd-parameters-title">Parameters</h4>
+                                            <ul class="tsd-parameter-list">
+                                                <li>
+                                                    <span
+                                                        ><span class="tsd-kind-parameter">userId</span>:
+                                                        <span class="tsd-signature-type">number</span></span
+                                                    >
+                                                    <div class="tsd-comment tsd-typography">
+                                                        <p>The Roblox user ID.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span
+                                                        ><span class="tsd-kind-parameter">badgeIds</span>:
+                                                        <span class="tsd-signature-type">number</span
+                                                        ><span class="tsd-signature-symbol">[]</span></span
+                                                    >
+                                                    <div class="tsd-comment tsd-typography">
+                                                        <p>An array of badge IDs to check if the user owns them.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="tsd-returns-title">
+                                            Returns <span class="tsd-signature-type">Promise</span
+                                            ><span class="tsd-signature-symbol">&lt;</span
+                                            ><a
+                                                href="../types/CheckedBadges.html"
+                                                class="tsd-signature-type tsd-kind-type-alias"
+                                                >CheckedBadges</a
+                                            ><span class="tsd-signature-symbol">&gt;</span>
+                                        </h4>
+                                        <p>
+                                            An array of checked badge objects specifying whether the user owns that
+                                            badge or not. (If they do, it includes the date of which they earned the
+                                            badge.)
+                                        </p>
+                                        <aside class="tsd-sources">
+                                            <ul>
+                                                <li>
+                                                    Defined in
+                                                    <a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7e6bbbd0224f55c3129fcb6468fefbd60c9eddc1/src/client.ts#L59"
+                                                        >client.ts:59</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
                         <section class="tsd-panel tsd-member">
                             <h3 class="tsd-anchor-link" id="getapikey">
                                 <span>get<wbr />API<wbr />Key</span
@@ -259,8 +354,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L23"
-                                                        >client.ts:23</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7e6bbbd0224f55c3129fcb6468fefbd60c9eddc1/src/client.ts#L34"
+                                                        >client.ts:34</a
                                                     >
                                                 </li>
                                             </ul>
@@ -306,8 +401,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L38"
-                                                        >client.ts:38</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7e6bbbd0224f55c3129fcb6468fefbd60c9eddc1/src/client.ts#L49"
+                                                        >client.ts:49</a
                                                     >
                                                 </li>
                                             </ul>
@@ -363,8 +458,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7fe658b1597b50398554ee5371778d30ec09dac3/src/client.ts#L30"
-                                                        >client.ts:30</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/7e6bbbd0224f55c3129fcb6468fefbd60c9eddc1/src/client.ts#L41"
+                                                        >client.ts:41</a
                                                     >
                                                 </li>
                                             </ul>
@@ -515,7 +610,11 @@
                                     >Methods
                                 </summary>
                                 <div>
-                                    <a href="#getapikey"
+                                    <a href="#checkbadges"
+                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                            <use href="../assets/icons.svg#icon-2048"></use></svg
+                                        ><span>check<wbr />Badges</span></a
+                                    ><a href="#getapikey"
                                         ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                             <use href="../assets/icons.svg#icon-2048"></use></svg
                                         ><span>get<wbr />API<wbr />Key</span></a
