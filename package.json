@@ -31,7 +31,10 @@
         }
     ],
     "files": [
-        "dist/"
+        "dist/",
+        "LICENSE",
+        "package.json",
+        "README.md"
     ],
     "author": "jacobhumston",
     "license": "MIT",
