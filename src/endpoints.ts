@@ -14,7 +14,7 @@ export async function postRequest(apiKey: string, url: URL, data: any) {
         body: JSON.stringify(Object.assign({ apiKey }, data)),
         headers: {
             'Content-Type': 'application/json',
-        },
+        }    
     });
 }
 
@@ -31,7 +31,7 @@ export type BadgesResponse = Array<[number, string]>;
  * @param id Roblox user ID.
  * @param badges An array of Roblox badge IDs.
  * @param apiRoutes Optional API route constructor.
- * @returns
+ * @returns The badges response.
  */
 async function badges(
     apiKey: string,
@@ -45,6 +45,25 @@ async function badges(
 }
 
 /**
+ * Followers response array.
+ * **Note:** The array of userIds is a string.
+ */
+export type FollowersResponse = Array<string>
+
+/**
+ * Fetch all followers for a Roblox user.
+ * @param apiKey Your API key.
+ * @param id Roblox user ID.
+ * @param apiRoutes Optional API route constructor.
+ * @returns The followers response.
+ */
+async function followers(apiKey: string, id: UserId, apiRoutes: typeof routes = routes): Promise<FollowersResponse> {
+    const res = await postRequest(apiKey, apiRoutes.followers, { id });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${await res.text()}`);
+    return (await res.json()) as FollowersResponse;
+}
+
+/**
  * API endpoint functions.
  */
-export const endpoints = { badges };
+export const endpoints = { badges, followers };

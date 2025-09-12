@@ -69,4 +69,8 @@ export class TowerStatsClient {
         }
         return results;
     }
+
+    async getFollowers() {
+        
+    }
 }
