@@ -1,7 +1,7 @@
 import { routes } from './url.js';
 import { endpoints } from './endpoints.js';
 import type { BadgeId, UserId } from './types.js';
-import type { CacheConfig } from './cache.js';
+import { CacheManager, type CacheConfig } from './cache.js';
 
 /**
  * An array of checked badges.
@@ -24,6 +24,9 @@ export class TowerStatsClient {
     /** API routes of this client. */
     #routes: typeof routes;
 
+    /** This client's cache manager. */
+    cache: CacheManager;
+
     /**
      * Create a new TowerStats client.
      * @param apiKey Your TowerStats API key.
@@ -33,6 +36,8 @@ export class TowerStatsClient {
     constructor(apiKey: string, cacheConfig?: Partial<CacheConfig>, apiRoutes: typeof routes = routes) {
         this.#apiKey = apiKey;
         this.#routes = apiRoutes;
+
+        this.cache = new CacheManager(cacheConfig);
     }
 
     /**
@@ -84,7 +89,10 @@ export class TowerStatsClient {
      * @returns An array of Roblox user IDs.
      */
     async getFollowers(userId: UserId): Promise<UserIdsArray> {
+        if (this.cache.has('followers', userId.toString()))
+            return this.cache.get<UserIdsArray>('followers', userId.toString()) ?? [];
         const response = await endpoints.followers(this.#apiKey, userId, this.#routes);
+        this.cache.set('followers', userId.toString(), response);
         return response;
     }
 
@@ -94,7 +102,10 @@ export class TowerStatsClient {
      * @returns An array of Roblox user IDs.
      */
     async getFollowing(userId: UserId): Promise<UserIdsArray> {
+        if (this.cache.has('following', userId.toString()))
+            return this.cache.get<UserIdsArray>('following', userId.toString()) ?? [];
         const response = await endpoints.following(this.#apiKey, userId, this.#routes);
+        this.cache.set('following', userId.toString(), response);
         return response;
     }
 }

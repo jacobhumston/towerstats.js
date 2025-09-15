@@ -2,7 +2,7 @@
     "name": "towerstats.js",
     "type": "module",
     "version": "0.0.2-alpha",
-    "description": "A JavaScript library for fetching and displaying Tower stats.",
+    "description": "A JavaScript API wrapper for the TowerStats.com API.",
     "devDependencies": {
         "@types/bun": "latest",
         "del-cli": "^6.0.0",
