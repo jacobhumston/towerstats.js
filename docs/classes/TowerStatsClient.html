@@ -68,8 +68,8 @@
                         <li>
                             Defined in
                             <a
-                                href="https://github.com/jacobhumston/towerstats.js/blob/a182b79aa295997293131b4875403d67084bb894/src/client.ts#L13"
-                                >client.ts:13</a
+                                href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L20"
+                                >client.ts:20</a
                             >
                         </li>
                     </ul>
@@ -106,6 +106,16 @@
                                             ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                                 <use href="../assets/icons.svg#icon-2048"></use></svg
                                             ><span>get<wbr />API<wbr />Key</span></a
+                                        >
+                                        <a href="#getfollowers" class="tsd-index-link"
+                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                                <use href="../assets/icons.svg#icon-2048"></use></svg
+                                            ><span>get<wbr />Followers</span></a
+                                        >
+                                        <a href="#getfollowing" class="tsd-index-link"
+                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                                <use href="../assets/icons.svg#icon-2048"></use></svg
+                                            ><span>get<wbr />Following</span></a
                                         >
                                         <a href="#getroutes" class="tsd-index-link"
                                             ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
@@ -151,6 +161,17 @@
                                         <span class="tsd-signature-type">string</span
                                         ><span class="tsd-signature-symbol">,</span><br />    <span
                                             class="tsd-kind-parameter"
+                                            >cacheConfig</span
+                                        ><span class="tsd-signature-symbol">?:</span>
+                                        <span class="tsd-signature-type">Partial</span
+                                        ><span class="tsd-signature-symbol">&lt;</span
+                                        ><a
+                                            href="../types/CacheConfig.html"
+                                            class="tsd-signature-type tsd-kind-type-alias"
+                                            >CacheConfig</a
+                                        ><span class="tsd-signature-symbol">&gt;</span
+                                        ><span class="tsd-signature-symbol">,</span><br />    <span
+                                            class="tsd-kind-parameter"
                                             >apiRoutes</span
                                         ><span class="tsd-signature-symbol">?:</span>
                                         <a href="RoutesConstructor.html" class="tsd-signature-type tsd-kind-class"
@@ -186,6 +207,22 @@
                                                 </li>
                                                 <li>
                                                     <span
+                                                        ><code class="tsd-tag">Optional</code
+                                                        ><span class="tsd-kind-parameter">cacheConfig</span>:
+                                                        <span class="tsd-signature-type">Partial</span
+                                                        ><span class="tsd-signature-symbol">&lt;</span
+                                                        ><a
+                                                            href="../types/CacheConfig.html"
+                                                            class="tsd-signature-type tsd-kind-type-alias"
+                                                            >CacheConfig</a
+                                                        ><span class="tsd-signature-symbol">&gt;</span></span
+                                                    >
+                                                    <div class="tsd-comment tsd-typography">
+                                                        <p>Cache config for this client.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span
                                                         ><span class="tsd-kind-parameter">apiRoutes</span>:
                                                         <a
                                                             href="RoutesConstructor.html"
@@ -211,8 +248,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/a182b79aa295997293131b4875403d67084bb894/src/client.ts#L25"
-                                                        >client.ts:25</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L33"
+                                                        >client.ts:33</a
                                                     >
                                                 </li>
                                             </ul>
@@ -311,8 +348,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/a182b79aa295997293131b4875403d67084bb894/src/client.ts#L59"
-                                                        >client.ts:59</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L69"
+                                                        >client.ts:69</a
                                                     >
                                                 </li>
                                             </ul>
@@ -354,8 +391,154 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/a182b79aa295997293131b4875403d67084bb894/src/client.ts#L34"
-                                                        >client.ts:34</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L44"
+                                                        >client.ts:44</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="tsd-panel tsd-member">
+                            <h3 class="tsd-anchor-link" id="getfollowers">
+                                <span>get<wbr />Followers</span
+                                ><a href="#getfollowers" aria-label="Permalink" class="tsd-anchor-icon"
+                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                ></a>
+                            </h3>
+                            <ul class="tsd-signatures">
+                                <li class="">
+                                    <div class="tsd-signature tsd-anchor-link" id="getfollowers-1">
+                                        <span class="tsd-kind-call-signature">getFollowers</span
+                                        ><span class="tsd-signature-symbol">(</span
+                                        ><span class="tsd-kind-parameter">userId</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">number</span
+                                        ><span class="tsd-signature-symbol">)</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">Promise</span
+                                        ><span class="tsd-signature-symbol">&lt;</span
+                                        ><a
+                                            href="../types/UserIdsArray.html"
+                                            class="tsd-signature-type tsd-kind-type-alias"
+                                            >UserIdsArray</a
+                                        ><span class="tsd-signature-symbol">&gt;</span
+                                        ><a href="#getfollowers-1" aria-label="Permalink" class="tsd-anchor-icon"
+                                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                        ></a>
+                                    </div>
+                                    <div class="tsd-description">
+                                        <div class="tsd-comment tsd-typography">
+                                            <p>Get a user's followers list.</p>
+                                        </div>
+                                        <div class="tsd-parameters">
+                                            <h4 class="tsd-parameters-title">Parameters</h4>
+                                            <ul class="tsd-parameter-list">
+                                                <li>
+                                                    <span
+                                                        ><span class="tsd-kind-parameter">userId</span>:
+                                                        <span class="tsd-signature-type">number</span></span
+                                                    >
+                                                    <div class="tsd-comment tsd-typography">
+                                                        <p>The Roblox user ID.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="tsd-returns-title">
+                                            Returns <span class="tsd-signature-type">Promise</span
+                                            ><span class="tsd-signature-symbol">&lt;</span
+                                            ><a
+                                                href="../types/UserIdsArray.html"
+                                                class="tsd-signature-type tsd-kind-type-alias"
+                                                >UserIdsArray</a
+                                            ><span class="tsd-signature-symbol">&gt;</span>
+                                        </h4>
+                                        <p>An array of Roblox user IDs.</p>
+                                        <aside class="tsd-sources">
+                                            <ul>
+                                                <li>
+                                                    Defined in
+                                                    <a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L88"
+                                                        >client.ts:88</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="tsd-panel tsd-member">
+                            <h3 class="tsd-anchor-link" id="getfollowing">
+                                <span>get<wbr />Following</span
+                                ><a href="#getfollowing" aria-label="Permalink" class="tsd-anchor-icon"
+                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                ></a>
+                            </h3>
+                            <ul class="tsd-signatures">
+                                <li class="">
+                                    <div class="tsd-signature tsd-anchor-link" id="getfollowing-1">
+                                        <span class="tsd-kind-call-signature">getFollowing</span
+                                        ><span class="tsd-signature-symbol">(</span
+                                        ><span class="tsd-kind-parameter">userId</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">number</span
+                                        ><span class="tsd-signature-symbol">)</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">Promise</span
+                                        ><span class="tsd-signature-symbol">&lt;</span
+                                        ><a
+                                            href="../types/UserIdsArray.html"
+                                            class="tsd-signature-type tsd-kind-type-alias"
+                                            >UserIdsArray</a
+                                        ><span class="tsd-signature-symbol">&gt;</span
+                                        ><a href="#getfollowing-1" aria-label="Permalink" class="tsd-anchor-icon"
+                                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                        ></a>
+                                    </div>
+                                    <div class="tsd-description">
+                                        <div class="tsd-comment tsd-typography">
+                                            <p>Get a user's following list.</p>
+                                        </div>
+                                        <div class="tsd-parameters">
+                                            <h4 class="tsd-parameters-title">Parameters</h4>
+                                            <ul class="tsd-parameter-list">
+                                                <li>
+                                                    <span
+                                                        ><span class="tsd-kind-parameter">userId</span>:
+                                                        <span class="tsd-signature-type">number</span></span
+                                                    >
+                                                    <div class="tsd-comment tsd-typography">
+                                                        <p>The Roblox user ID.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h4 class="tsd-returns-title">
+                                            Returns <span class="tsd-signature-type">Promise</span
+                                            ><span class="tsd-signature-symbol">&lt;</span
+                                            ><a
+                                                href="../types/UserIdsArray.html"
+                                                class="tsd-signature-type tsd-kind-type-alias"
+                                                >UserIdsArray</a
+                                            ><span class="tsd-signature-symbol">&gt;</span>
+                                        </h4>
+                                        <p>An array of Roblox user IDs.</p>
+                                        <aside class="tsd-sources">
+                                            <ul>
+                                                <li>
+                                                    Defined in
+                                                    <a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L98"
+                                                        >client.ts:98</a
                                                     >
                                                 </li>
                                             </ul>
@@ -401,8 +584,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/a182b79aa295997293131b4875403d67084bb894/src/client.ts#L49"
-                                                        >client.ts:49</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L59"
+                                                        >client.ts:59</a
                                                     >
                                                 </li>
                                             </ul>
@@ -458,8 +641,8 @@
                                                 <li>
                                                     Defined in
                                                     <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/a182b79aa295997293131b4875403d67084bb894/src/client.ts#L41"
-                                                        >client.ts:41</a
+                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/client.ts#L51"
+                                                        >client.ts:51</a
                                                     >
                                                 </li>
                                             </ul>
@@ -618,6 +801,14 @@
                                         ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                             <use href="../assets/icons.svg#icon-2048"></use></svg
                                         ><span>get<wbr />API<wbr />Key</span></a
+                                    ><a href="#getfollowers"
+                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                            <use href="../assets/icons.svg#icon-2048"></use></svg
+                                        ><span>get<wbr />Followers</span></a
+                                    ><a href="#getfollowing"
+                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                            <use href="../assets/icons.svg#icon-2048"></use></svg
+                                        ><span>get<wbr />Following</span></a
                                     ><a href="#getroutes"
                                         ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                             <use href="../assets/icons.svg#icon-2048"></use></svg

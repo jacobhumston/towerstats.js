@@ -1,6 +1,7 @@
 import { routes } from './url.js';
 import { endpoints } from './endpoints.js';
 import type { BadgeId, UserId } from './types.js';
+import type { CacheConfig } from './cache.js';
 
 /**
  * An array of checked badges.
@@ -8,6 +9,12 @@ import type { BadgeId, UserId } from './types.js';
 export type CheckedBadges = Array<
     { id: number; owned: false; earnedDate: null } | { id: number; owned: true; earnedDate: Date }
 >;
+
+/**
+ * An array of user IDs.
+ * **Note:** These user IDs are strings.
+ */
+export type UserIdsArray = Array<string>;
 
 /** TowerStats API client. */
 export class TowerStatsClient {
@@ -20,9 +27,10 @@ export class TowerStatsClient {
     /**
      * Create a new TowerStats client.
      * @param apiKey Your TowerStats API key.
+     * @param cacheConfig Cache config for this client.
      * @param apiRoutes The API routes to use. Defaults to the official TowerStats API routes.
      */
-    constructor(apiKey: string, apiRoutes: typeof routes = routes) {
+    constructor(apiKey: string, cacheConfig?: Partial<CacheConfig>, apiRoutes: typeof routes = routes) {
         this.#apiKey = apiKey;
         this.#routes = apiRoutes;
     }
@@ -70,7 +78,23 @@ export class TowerStatsClient {
         return results;
     }
 
-    async getFollowers() {
-        
+    /**
+     * Get a user's followers list.
+     * @param userId The Roblox user ID.
+     * @returns An array of Roblox user IDs.
+     */
+    async getFollowers(userId: UserId): Promise<UserIdsArray> {
+        const response = await endpoints.followers(this.#apiKey, userId, this.#routes);
+        return response;
+    }
+
+    /**
+     * Get a user's following list.
+     * @param userId The Roblox user ID.
+     * @returns An array of Roblox user IDs.
+     */
+    async getFollowing(userId: UserId): Promise<UserIdsArray> {
+        const response = await endpoints.following(this.#apiKey, userId, this.#routes);
+        return response;
     }
 }

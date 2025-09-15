@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="IE=edge" />
-        <title>RoutesConstructor | towerstats.js</title>
+        <title>CacheManager | towerstats.js</title>
         <meta name="description" content="Documentation for towerstats.js" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="../assets/style.css" />
@@ -56,22 +56,13 @@
             <div class="col-content">
                 <div class="tsd-page-title">
                     <ul class="tsd-breadcrumb" aria-label="Breadcrumb">
-                        <li><a href="" aria-current="page">RoutesConstructor</a></li>
+                        <li><a href="" aria-current="page">CacheManager</a></li>
                     </ul>
-                    <h1>Class RoutesConstructor</h1>
+                    <h1>Class CacheManager</h1>
                 </div>
-                <section class="tsd-panel tsd-comment">
-                    <div class="tsd-comment tsd-typography"><p>API routes constructor.</p></div>
-                </section>
                 <aside class="tsd-sources">
                     <ul>
-                        <li>
-                            Defined in
-                            <a
-                                href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L2"
-                                >url.ts:2</a
-                            >
-                        </li>
+                        <li>Defined in cache.ts:13</li>
                     </ul>
                 </aside>
                 <section class="tsd-panel-group tsd-index-group">
@@ -95,42 +86,17 @@
                                     </div>
                                 </section>
                                 <section class="tsd-index-section">
-                                    <h3 class="tsd-index-heading">Properties</h3>
-                                    <div class="tsd-index-list">
-                                        <a href="#baseurl" class="tsd-index-link"
-                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property">
-                                                <use href="../assets/icons.svg#icon-1024"></use></svg
-                                            ><span>base<wbr />URL</span></a
-                                        >
-                                    </div>
-                                </section>
-                                <section class="tsd-index-section">
-                                    <h3 class="tsd-index-heading">Accessors</h3>
-                                    <div class="tsd-index-list">
-                                        <a href="#badges" class="tsd-index-link"
-                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Accessor">
-                                                <use href="../assets/icons.svg#icon-262144"></use></svg
-                                            ><span>badges</span></a
-                                        >
-                                        <a href="#followers" class="tsd-index-link"
-                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Accessor">
-                                                <use href="../assets/icons.svg#icon-262144"></use></svg
-                                            ><span>followers</span></a
-                                        >
-                                        <a href="#following" class="tsd-index-link"
-                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Accessor">
-                                                <use href="../assets/icons.svg#icon-262144"></use></svg
-                                            ><span>following</span></a
-                                        >
-                                    </div>
-                                </section>
-                                <section class="tsd-index-section">
                                     <h3 class="tsd-index-heading">Methods</h3>
                                     <div class="tsd-index-list">
-                                        <a href="#baseappend" class="tsd-index-link"
+                                        <a href="#startsweeper" class="tsd-index-link"
                                             ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                                 <use href="../assets/icons.svg#icon-2048"></use></svg
-                                            ><span>base<wbr />Append</span></a
+                                            ><span>start<wbr />Sweeper</span></a
+                                        >
+                                        <a href="#stopsweeper" class="tsd-index-link"
+                                            ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                                <use href="../assets/icons.svg#icon-2048"></use></svg
+                                            ><span>stop<wbr />Sweeper</span></a
                                         >
                                     </div>
                                 </section>
@@ -156,18 +122,24 @@
                             </h3>
                             <ul class="tsd-signatures">
                                 <li class="">
-                                    <div class="tsd-signature tsd-anchor-link" id="constructorroutesconstructor">
+                                    <div class="tsd-signature tsd-anchor-link" id="constructorcachemanager">
                                         <span class="tsd-signature-keyword">new</span>
-                                        <span class="tsd-kind-constructor-signature">RoutesConstructor</span
+                                        <span class="tsd-kind-constructor-signature">CacheManager</span
                                         ><span class="tsd-signature-symbol">(</span
-                                        ><span class="tsd-kind-parameter">baseURL</span
+                                        ><span class="tsd-kind-parameter">config</span
                                         ><span class="tsd-signature-symbol">?:</span>
-                                        <span class="tsd-signature-type">string</span
+                                        <span class="tsd-signature-type">Partial</span
+                                        ><span class="tsd-signature-symbol">&lt;</span
+                                        ><a
+                                            href="../types/CacheConfig.html"
+                                            class="tsd-signature-type tsd-kind-type-alias"
+                                            >CacheConfig</a
+                                        ><span class="tsd-signature-symbol">&gt;</span
                                         ><span class="tsd-signature-symbol">)</span
                                         ><span class="tsd-signature-symbol">:</span>
-                                        <a href="" class="tsd-signature-type tsd-kind-class">RoutesConstructor</a
+                                        <a href="" class="tsd-signature-type tsd-kind-class">CacheManager</a
                                         ><a
-                                            href="#constructorroutesconstructor"
+                                            href="#constructorcachemanager"
                                             aria-label="Permalink"
                                             class="tsd-anchor-icon"
                                             ><svg viewBox="0 0 24 24" aria-hidden="true">
@@ -175,204 +147,31 @@
                                         ></a>
                                     </div>
                                     <div class="tsd-description">
-                                        <div class="tsd-comment tsd-typography">
-                                            <p>Create a new route constructor.</p>
-                                        </div>
                                         <div class="tsd-parameters">
                                             <h4 class="tsd-parameters-title">Parameters</h4>
                                             <ul class="tsd-parameter-list">
                                                 <li>
                                                     <span
-                                                        ><span class="tsd-kind-parameter">baseURL</span>:
-                                                        <span class="tsd-signature-type">string</span
-                                                        ><span class="tsd-signature-symbol">
-                                                            = &#39;https://api.towerstats.com&#39;</span
-                                                        ></span
+                                                        ><code class="tsd-tag">Optional</code
+                                                        ><span class="tsd-kind-parameter">config</span>:
+                                                        <span class="tsd-signature-type">Partial</span
+                                                        ><span class="tsd-signature-symbol">&lt;</span
+                                                        ><a
+                                                            href="../types/CacheConfig.html"
+                                                            class="tsd-signature-type tsd-kind-type-alias"
+                                                            >CacheConfig</a
+                                                        ><span class="tsd-signature-symbol">&gt;</span></span
                                                     >
-                                                    <div class="tsd-comment tsd-typography">
-                                                        <p>Specify the base URL of this route constructor.</p>
-                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
                                         <h4 class="tsd-returns-title">
                                             Returns
-                                            <a href="" class="tsd-signature-type tsd-kind-class">RoutesConstructor</a>
+                                            <a href="" class="tsd-signature-type tsd-kind-class">CacheManager</a>
                                         </h4>
                                         <aside class="tsd-sources">
                                             <ul>
-                                                <li>
-                                                    Defined in
-                                                    <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L10"
-                                                        >url.ts:10</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </aside>
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>
-                    </section>
-                </details>
-                <details class="tsd-panel-group tsd-member-group tsd-accordion" open>
-                    <summary class="tsd-accordion-summary" data-key="section-Properties">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <use href="../assets/icons.svg#icon-chevronDown"></use>
-                        </svg>
-                        <h2>Properties</h2>
-                    </summary>
-                    <section>
-                        <section class="tsd-panel tsd-member">
-                            <h3 class="tsd-anchor-link" id="baseurl">
-                                <span>base<wbr />URL</span
-                                ><a href="#baseurl" aria-label="Permalink" class="tsd-anchor-icon"
-                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
-                                ></a>
-                            </h3>
-                            <div class="tsd-signature">
-                                <span class="tsd-kind-property">baseURL</span
-                                ><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">URL</span>
-                            </div>
-                            <div class="tsd-comment tsd-typography"><p>Base URL.</p></div>
-                            <aside class="tsd-sources">
-                                <ul>
-                                    <li>
-                                        Defined in
-                                        <a
-                                            href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L4"
-                                            >url.ts:4</a
-                                        >
-                                    </li>
-                                </ul>
-                            </aside>
-                        </section>
-                    </section>
-                </details>
-                <details class="tsd-panel-group tsd-member-group tsd-accordion" open>
-                    <summary class="tsd-accordion-summary" data-key="section-Accessors">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <use href="../assets/icons.svg#icon-chevronDown"></use>
-                        </svg>
-                        <h2>Accessors</h2>
-                    </summary>
-                    <section>
-                        <section class="tsd-panel tsd-member">
-                            <h3 class="tsd-anchor-link" id="badges">
-                                <span>badges</span
-                                ><a href="#badges" aria-label="Permalink" class="tsd-anchor-icon"
-                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
-                                ></a>
-                            </h3>
-                            <ul class="tsd-signatures">
-                                <li>
-                                    <div class="tsd-signature" id="badgesbadges">
-                                        <span class="tsd-signature-keyword">get</span>
-                                        <span class="tsd-kind-get-signature">badges</span
-                                        ><span class="tsd-signature-symbol">()</span
-                                        ><span class="tsd-signature-symbol">:</span>
-                                        <span class="tsd-signature-type">URL</span>
-                                    </div>
-                                    <div class="tsd-description">
-                                        <div class="tsd-comment tsd-typography">
-                                            <p><code>POST</code> Submit badge data for a Roblox user.</p>
-                                        </div>
-                                        <h4 class="tsd-returns-title">
-                                            Returns <span class="tsd-signature-type">URL</span>
-                                        </h4>
-                                        <p><code>/api/badges</code> route.</p>
-                                        <aside class="tsd-sources">
-                                            <ul>
-                                                <li>
-                                                    Defined in
-                                                    <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L27"
-                                                        >url.ts:27</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </aside>
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>
-                        <section class="tsd-panel tsd-member">
-                            <h3 class="tsd-anchor-link" id="followers">
-                                <span>followers</span
-                                ><a href="#followers" aria-label="Permalink" class="tsd-anchor-icon"
-                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
-                                ></a>
-                            </h3>
-                            <ul class="tsd-signatures">
-                                <li>
-                                    <div class="tsd-signature" id="followersfollowers">
-                                        <span class="tsd-signature-keyword">get</span>
-                                        <span class="tsd-kind-get-signature">followers</span
-                                        ><span class="tsd-signature-symbol">()</span
-                                        ><span class="tsd-signature-symbol">:</span>
-                                        <span class="tsd-signature-type">URL</span>
-                                    </div>
-                                    <div class="tsd-description">
-                                        <div class="tsd-comment tsd-typography">
-                                            <p><code>POST</code> Fetch all followers for a Roblox user.</p>
-                                        </div>
-                                        <h4 class="tsd-returns-title">
-                                            Returns <span class="tsd-signature-type">URL</span>
-                                        </h4>
-                                        <p><code>/api/followers</code> route.</p>
-                                        <aside class="tsd-sources">
-                                            <ul>
-                                                <li>
-                                                    Defined in
-                                                    <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L35"
-                                                        >url.ts:35</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </aside>
-                                    </div>
-                                </li>
-                            </ul>
-                        </section>
-                        <section class="tsd-panel tsd-member">
-                            <h3 class="tsd-anchor-link" id="following">
-                                <span>following</span
-                                ><a href="#following" aria-label="Permalink" class="tsd-anchor-icon"
-                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
-                                ></a>
-                            </h3>
-                            <ul class="tsd-signatures">
-                                <li>
-                                    <div class="tsd-signature" id="followingfollowing">
-                                        <span class="tsd-signature-keyword">get</span>
-                                        <span class="tsd-kind-get-signature">following</span
-                                        ><span class="tsd-signature-symbol">()</span
-                                        ><span class="tsd-signature-symbol">:</span>
-                                        <span class="tsd-signature-type">URL</span>
-                                    </div>
-                                    <div class="tsd-description">
-                                        <div class="tsd-comment tsd-typography">
-                                            <p><code>POST</code> Fetch all users that a Roblox user is following.</p>
-                                        </div>
-                                        <h4 class="tsd-returns-title">
-                                            Returns <span class="tsd-signature-type">URL</span>
-                                        </h4>
-                                        <p><code>/api/following</code> route.</p>
-                                        <aside class="tsd-sources">
-                                            <ul>
-                                                <li>
-                                                    Defined in
-                                                    <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L43"
-                                                        >url.ts:43</a
-                                                    >
-                                                </li>
+                                                <li>Defined in cache.ts:17</li>
                                             </ul>
                                         </aside>
                                     </div>
@@ -390,60 +189,65 @@
                     </summary>
                     <section>
                         <section class="tsd-panel tsd-member">
-                            <h3 class="tsd-anchor-link" id="baseappend">
-                                <span>base<wbr />Append</span
-                                ><a href="#baseappend" aria-label="Permalink" class="tsd-anchor-icon"
+                            <h3 class="tsd-anchor-link" id="startsweeper">
+                                <span>start<wbr />Sweeper</span
+                                ><a href="#startsweeper" aria-label="Permalink" class="tsd-anchor-icon"
                                     ><svg viewBox="0 0 24 24" aria-hidden="true">
                                         <use href="../assets/icons.svg#icon-anchor"></use></svg
                                 ></a>
                             </h3>
                             <ul class="tsd-signatures">
                                 <li class="">
-                                    <div class="tsd-signature tsd-anchor-link" id="baseappend-1">
-                                        <span class="tsd-kind-call-signature">baseAppend</span
-                                        ><span class="tsd-signature-symbol">(</span
-                                        ><span class="tsd-kind-parameter">path</span
+                                    <div class="tsd-signature tsd-anchor-link" id="startsweeper-1">
+                                        <span class="tsd-kind-call-signature">startSweeper</span
+                                        ><span class="tsd-signature-symbol">()</span
                                         ><span class="tsd-signature-symbol">:</span>
-                                        <span class="tsd-signature-type">string</span
-                                        ><span class="tsd-signature-symbol">)</span
-                                        ><span class="tsd-signature-symbol">:</span>
-                                        <span class="tsd-signature-type">URL</span
-                                        ><a href="#baseappend-1" aria-label="Permalink" class="tsd-anchor-icon"
+                                        <span class="tsd-signature-type">void</span
+                                        ><a href="#startsweeper-1" aria-label="Permalink" class="tsd-anchor-icon"
                                             ><svg viewBox="0 0 24 24" aria-hidden="true">
                                                 <use href="../assets/icons.svg#icon-anchor"></use></svg
                                         ></a>
                                     </div>
                                     <div class="tsd-description">
-                                        <div class="tsd-comment tsd-typography">
-                                            <p>Append a path to the base URL.</p>
-                                        </div>
-                                        <div class="tsd-parameters">
-                                            <h4 class="tsd-parameters-title">Parameters</h4>
-                                            <ul class="tsd-parameter-list">
-                                                <li>
-                                                    <span
-                                                        ><span class="tsd-kind-parameter">path</span>:
-                                                        <span class="tsd-signature-type">string</span></span
-                                                    >
-                                                    <div class="tsd-comment tsd-typography">
-                                                        <p>The path to append.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
                                         <h4 class="tsd-returns-title">
-                                            Returns <span class="tsd-signature-type">URL</span>
+                                            Returns <span class="tsd-signature-type">void</span>
                                         </h4>
-                                        <p>The complete URL.</p>
                                         <aside class="tsd-sources">
                                             <ul>
-                                                <li>
-                                                    Defined in
-                                                    <a
-                                                        href="https://github.com/jacobhumston/towerstats.js/blob/4849b6f2a9d87014fcceef84320d0eb2475af8db/src/url.ts#L19"
-                                                        >url.ts:19</a
-                                                    >
-                                                </li>
+                                                <li>Defined in cache.ts:27</li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="tsd-panel tsd-member">
+                            <h3 class="tsd-anchor-link" id="stopsweeper">
+                                <span>stop<wbr />Sweeper</span
+                                ><a href="#stopsweeper" aria-label="Permalink" class="tsd-anchor-icon"
+                                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                ></a>
+                            </h3>
+                            <ul class="tsd-signatures">
+                                <li class="">
+                                    <div class="tsd-signature tsd-anchor-link" id="stopsweeper-1">
+                                        <span class="tsd-kind-call-signature">stopSweeper</span
+                                        ><span class="tsd-signature-symbol">()</span
+                                        ><span class="tsd-signature-symbol">:</span>
+                                        <span class="tsd-signature-type">void</span
+                                        ><a href="#stopsweeper-1" aria-label="Permalink" class="tsd-anchor-icon"
+                                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <use href="../assets/icons.svg#icon-anchor"></use></svg
+                                        ></a>
+                                    </div>
+                                    <div class="tsd-description">
+                                        <h4 class="tsd-returns-title">
+                                            Returns <span class="tsd-signature-type">void</span>
+                                        </h4>
+                                        <aside class="tsd-sources">
+                                            <ul>
+                                                <li>Defined in cache.ts:31</li>
                                             </ul>
                                         </aside>
                                     </div>
@@ -586,52 +390,20 @@
                                 </div>
                             </details>
                             <details open class="tsd-accordion tsd-page-navigation-section">
-                                <summary class="tsd-accordion-summary" data-key="section-Properties">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                        <use href="../assets/icons.svg#icon-chevronDown"></use></svg
-                                    >Properties
-                                </summary>
-                                <div>
-                                    <a href="#baseurl"
-                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property">
-                                            <use href="../assets/icons.svg#icon-1024"></use></svg
-                                        ><span>base<wbr />URL</span></a
-                                    >
-                                </div>
-                            </details>
-                            <details open class="tsd-accordion tsd-page-navigation-section">
-                                <summary class="tsd-accordion-summary" data-key="section-Accessors">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                        <use href="../assets/icons.svg#icon-chevronDown"></use></svg
-                                    >Accessors
-                                </summary>
-                                <div>
-                                    <a href="#badges"
-                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Accessor">
-                                            <use href="../assets/icons.svg#icon-262144"></use></svg
-                                        ><span>badges</span></a
-                                    ><a href="#followers"
-                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Accessor">
-                                            <use href="../assets/icons.svg#icon-262144"></use></svg
-                                        ><span>followers</span></a
-                                    ><a href="#following"
-                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Accessor">
-                                            <use href="../assets/icons.svg#icon-262144"></use></svg
-                                        ><span>following</span></a
-                                    >
-                                </div>
-                            </details>
-                            <details open class="tsd-accordion tsd-page-navigation-section">
                                 <summary class="tsd-accordion-summary" data-key="section-Methods">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                         <use href="../assets/icons.svg#icon-chevronDown"></use></svg
                                     >Methods
                                 </summary>
                                 <div>
-                                    <a href="#baseappend"
+                                    <a href="#startsweeper"
                                         ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
                                             <use href="../assets/icons.svg#icon-2048"></use></svg
-                                        ><span>base<wbr />Append</span></a
+                                        ><span>start<wbr />Sweeper</span></a
+                                    ><a href="#stopsweeper"
+                                        ><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method">
+                                            <use href="../assets/icons.svg#icon-2048"></use></svg
+                                        ><span>stop<wbr />Sweeper</span></a
                                     >
                                 </div>
                             </details>
