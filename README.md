@@ -20,7 +20,12 @@ bun install towerstats.js
 import { TowerStatsClient } from 'towerstats.js';
 import token from './token'; // You'll want to store your API token somewhere safe
 
-const client = new TowerStatsClient(token);
+/*
+    Setting "autoStartSweeper" to false prevents the process from running forever.
+    However, if you don't start the sweeper manually afterwards you may eventually run
+    into memory leaks. (Unless you disable the cache altogether.)
+*/
+const client = new TowerStatsClient(token, { autoStartSweeper: false });
 const followers = await client.getFollowers(2614622891);
 
 console.log(followers); // Logs followers

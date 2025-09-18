@@ -70,16 +70,29 @@ export class TowerStatsClient {
      * @returns An array of checked badge objects specifying whether the user owns that badge or not. (If they do, it includes the date of which they earned the badge.)
      */
     async checkBadges(userId: UserId, badgeIds: Array<BadgeId>): Promise<CheckedBadges> {
-        const response = await endpoints.badges(this.#apiKey, userId, badgeIds, this.#routes);
+        const allCachedBadges = this.cache.get<CheckedBadges>('badges', userId.toString()) ?? [];
+        const cachedBadges = (allCachedBadges ?? []).filter((badge) => badgeIds.includes(badge.id));
+        const badgesToCheck = badgeIds.filter((id) => cachedBadges.find((b) => b.id === id) === undefined);
         const results: CheckedBadges = [];
-        for (const id of badgeIds) {
-            const data = response.find((b) => b[0] === id);
-            if (data && typeof data[1] === 'string') {
-                results.push({ id, owned: true, earnedDate: new Date(data[1]) });
-            } else {
-                results.push({ id, owned: false, earnedDate: null });
+        results.push(...cachedBadges);
+        if (badgesToCheck.length > 0) {
+            const response = await endpoints.badges(
+                this.#apiKey,
+                userId,
+                badgeIds.filter((id) => cachedBadges.find((b) => b.id === id) === undefined),
+                this.#routes
+            );
+            for (const id of badgeIds) {
+                const data = response.find((b) => b[0] === id);
+                if (data && typeof data[1] === 'string') {
+                    results.push({ id, owned: true, earnedDate: new Date(data[1]) });
+                } else {
+                    results.push({ id, owned: false, earnedDate: null });
+                }
             }
+            allCachedBadges.push(...results);
         }
+        this.cache.set('badges', userId.toString(), allCachedBadges);
         return results;
     }
 

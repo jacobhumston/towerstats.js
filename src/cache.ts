@@ -8,6 +8,8 @@ export type CacheConfig = {
     sweeperInterval: number;
     /** Individual item lifespan in milliseconds. Default is `3 * 60 * 1000`. (3 Minutes)*/
     lifespan: number;
+    /** Start the sweeper automatically. If false, you must start the sweeper manually using `CacheManager.startSweeper()`. Default is `true` */
+    autoStartSweeper: boolean;
 };
 
 /** Memory based cache management. */
@@ -28,10 +30,11 @@ export class CacheManager {
             enabled: true,
             sweeperInterval: 1000,
             lifespan: 3 * 60 * 1000,
+            autoStartSweeper: true,
         };
 
         this.#config = Object.assign(cacheConfigDefaults, config ?? {});
-        this.startSweeper();
+        if (this.#config.autoStartSweeper) this.startSweeper();
     }
 
     /**
