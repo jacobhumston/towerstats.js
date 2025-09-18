@@ -1,7 +1,7 @@
 {
     "name": "towerstats.js",
     "type": "module",
-    "version": "0.0.2-alpha",
+    "version": "1.0.0",
     "description": "A JavaScript API wrapper for the TowerStats.com API.",
     "devDependencies": {
         "@types/bun": "latest",
