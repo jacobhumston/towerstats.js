@@ -11,9 +11,10 @@ import { routes } from './url.js';
 export async function postRequest(apiKey: string, url: URL, data: any) {
     return fetch(url, {
         method: 'POST',
-        body: JSON.stringify(Object.assign({ apiKey }, data)),
+        body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json',
+            apiKey: apiKey,
         },
     });
 }
