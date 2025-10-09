@@ -42,6 +42,8 @@ const followers = await endpoints.followers(token, 2614622891);
 console.log(followers); // Logs followers
 ```
 
+A bundle is also available, which can also be accessed on https://cdn.jsdelivr.net/npm/towerstats.js/dist/bundle.js.
+
 See the docs for a full list of what is available. https://towerstats.js.lovelyjacob.com
 
 _Maintained by Jacob Humston_ (MIT License)
