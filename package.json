@@ -7,9 +7,9 @@
         "@types/bun": "latest",
         "del-cli": "^6.0.0",
         "prettier": "^3.6.2",
-        "typedoc": "^0.28.12",
+        "typedoc": "^0.28.13",
         "typedoc-github-theme": "^0.3.1",
-        "typescript": "^5.9.2"
+        "typescript": "^5.9.3"
     },
     "scripts": {
         "build": "bun x tsc",
