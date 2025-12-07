@@ -1,4 +1,4 @@
-import type { BadgeId, UserId } from './types.js';
+import type { BadgeId, UniverseId, UserId } from './types.js';
 import { routes } from './url.js';
 
 /**
@@ -24,7 +24,7 @@ export async function postRequest(apiKey: string, url: URL, data: any) {
  * Each array in the main array contains `[0]<badgeId>` and `[1]<completionDate>`.
  * Note that unowned badges are not included in the array.
  */
-export type BadgesResponse = Array<[number, string]>;
+export type BadgesResponse = Array<[BadgeId, string]>;
 
 /**
  * Submit badge data for a Roblox user.
@@ -43,6 +43,32 @@ async function badges(
     const res = await postRequest(apiKey, apiRoutes.badges, { id, badges });
     if (!res.ok) throw new Error(`Error ${res.status}: ${await res.text()}`);
     return (await res.json()) as BadgesResponse;
+}
+
+/**
+ * Game Badges response array.
+ * Each array in the main array contains `[0]<badgeId>` and `[1]<completionDate>`.
+ * Note that unowned badges are not included in the array.
+ */
+export type GameBadgesResponse = Array<[BadgeId, string]>;
+
+/**
+ * Fetch all badges that a user owns for a specific universe.
+ * @param apiKey Your API key.
+ * @param id Roblox user ID.
+ * @param universeId Roblox universe ID.
+ * @param apiRoutes Optional API route constructor.
+ * @returns The game badges response.
+ */
+async function gameBadges(
+    apiKey: string,
+    id: UserId,
+    universeId: UniverseId,
+    apiRoutes: typeof routes = routes
+): Promise<GameBadgesResponse> {
+    const res = await postRequest(apiKey, apiRoutes.gameBadges, { id, universe_id: universeId });
+    if (!res.ok) throw new Error(`Error ${res.status}: ${await res.text()}`);
+    return (await res.json()) as GameBadgesResponse;
 }
 
 /**
@@ -86,4 +112,4 @@ async function following(apiKey: string, id: UserId, apiRoutes: typeof routes = 
 /**
  * API endpoint functions.
  */
-export const endpoints = { badges, followers, following };
+export const endpoints = { badges, followers, following, gameBadges };

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="IE=edge" />
-        <title>UserIdsArray | towerstats.js</title>
+        <title>GameBadgesResponse | towerstats.js</title>
         <meta name="description" content="Documentation for towerstats.js" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="../assets/style.css" />
@@ -56,24 +56,31 @@
             <div class="col-content">
                 <div class="tsd-page-title">
                     <ul class="tsd-breadcrumb" aria-label="Breadcrumb">
-                        <li><a href="" aria-current="page">UserIdsArray</a></li>
+                        <li><a href="" aria-current="page">GameBadgesResponse</a></li>
                     </ul>
-                    <h1>Type Alias UserIdsArray</h1>
+                    <h1>Type Alias GameBadgesResponse</h1>
                 </div>
                 <div class="tsd-signature">
-                    <span class="tsd-kind-type-alias">UserIdsArray</span><span class="tsd-signature-symbol">:</span>
-                    <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>
+                    <span class="tsd-kind-type-alias">GameBadgesResponse</span
+                    ><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span
+                    ><a href="BadgeId.html" class="tsd-signature-type tsd-kind-type-alias">BadgeId</a
+                    ><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">string</span
+                    ><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[]</span>
                 </div>
                 <div class="tsd-comment tsd-typography">
-                    <p>An array of user IDs. <strong>Note:</strong> These user IDs are strings.</p>
+                    <p>
+                        Game Badges response array. Each array in the main array contains
+                        <code>[0]&lt;badgeId&gt;</code> and <code>[1]&lt;completionDate&gt;</code>. Note that unowned
+                        badges are not included in the array.
+                    </p>
                 </div>
                 <aside class="tsd-sources">
                     <ul>
                         <li>
                             Defined in
                             <a
-                                href="https://github.com/jacobhumston/towerstats.js/blob/10301b4ab4eae9c2df1c467e12f87d21b623c9be/src/client.ts#L17"
-                                >client.ts:17</a
+                                href="https://github.com/jacobhumston/towerstats.js/blob/10301b4ab4eae9c2df1c467e12f87d21b623c9be/src/endpoints.ts#L53"
+                                >endpoints.ts:53</a
                             >
                         </li>
                     </ul>

@@ -1,6 +1,6 @@
 import { routes } from './url.js';
 import { endpoints } from './endpoints.js';
-import type { BadgeId, UserId } from './types.js';
+import type { BadgeId, UniverseId, UserId } from './types.js';
 import { CacheManager, type CacheConfig } from './cache.js';
 
 /**
@@ -93,6 +93,22 @@ export class TowerStatsClient {
             allCachedBadges.push(...results);
         }
         this.cache.set('badges', userId.toString(), allCachedBadges);
+        return results;
+    }
+
+    /**
+     * Check which badges a user owns for a specific universe.
+     * **NOTE:** This method is not cached due to the badge list being unknown.
+     * @param userId The Roblox user ID.
+     * @param universeId The Roblox universe ID.
+     * @returns An array of owned badges. Note that it does NOT include unowned badges.
+     */
+    async checkGameBadges(userId: UserId, universeId: UniverseId): Promise<CheckedBadges> {
+        const results: CheckedBadges = [];
+        const response = await endpoints.gameBadges(this.#apiKey, userId, universeId, this.#routes);
+        for (const badge of response) {
+            results.push({ id: badge[0], owned: true, earnedDate: new Date(badge[1]) });
+        }
         return results;
     }
 

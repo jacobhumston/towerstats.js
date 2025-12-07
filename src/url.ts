@@ -43,6 +43,14 @@ export class RoutesConstructor {
     get following(): URL {
         return this.baseAppend('/api/following');
     }
+
+    /**
+     * `POST` Check which badges a user has earned in a specific Roblox universe.
+     * @returns `/api/game_badges` route.
+     */
+    get gameBadges(): URL {
+        return this.baseAppend('/api/game_badges');
+    }
 }
 
 /** TowerStats API routes. */
